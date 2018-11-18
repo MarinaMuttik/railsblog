@@ -1,8 +1,19 @@
 = link_to 'Go back to posts', posts_path
 = link_to 'Edit post', edit_post_path(@post)
-
+%p
 %strong Title:
 = @post.title
-
+%p
 %strong Text:
 = @post.body
+%p
+%strong Comments:
+%p
+- if @post.comments.empty?
+  = 'There are no comments to show!'
+- else
+  = render @post.comments, post: @post, comment: @comment
+%p
+%strong Add a comment:
+%p
+= render 'comments/form', post: @post, comment: @comment

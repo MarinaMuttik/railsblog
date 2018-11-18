@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: 'tig', password: 'mew', except: [:index, :show]
+
   def index
     @posts = Post.all
   end
@@ -19,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post, alert: 'Post created!'
+      redirect_to @post
     else
       render 'new'
     end
@@ -43,7 +45,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def post_params
     params.require(:post).permit(:title, :body)
   end
