@@ -1,12 +1,12 @@
-= form_for @post, :local => true do |form|
-  - if @post.errors.any?
-    #error_explanation
+= form_for post, :local => true do |form|
+  - if post.errors.any?
+    #error-explanation
       %h2
-        = pluralize(@post.errors.count, "error")
+        = pluralize(post.errors.count, "error")
         prohibited
         this post from being saved:
       %ul
-        - @post.errors.full_messages.each do |msg|
+        - post.errors.full_messages.each do |msg|
           %li= msg
   %table
     %tr
@@ -16,7 +16,7 @@
         = form.text_field :title
     %tr
       %td
-        %label{:for => "text_area"}> Body
+        %label{ :for => "text_area" }> Body
       %td
         = form.text_area :body
 
