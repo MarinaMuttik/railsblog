@@ -10,7 +10,7 @@
 %strong Comments:
 %p
 - if @post.comments.empty?
-  = 'There are no comments to show!'
+  There are no comments to show!
 - else
   = render @post.comments, post: @post, comment: @comment
 %p

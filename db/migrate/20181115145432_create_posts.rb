@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Posts class
+
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |post|
