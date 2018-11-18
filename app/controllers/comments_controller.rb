@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# Establishing controls and routes for comments
+
 class CommentsController < ApplicationController
   http_basic_authenticate_with name: 'tig', password: 'mew', only: :destroy
 

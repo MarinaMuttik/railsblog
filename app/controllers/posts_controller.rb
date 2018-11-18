@@ -1,5 +1,10 @@
+# frozen_string_literal: true
+
+# Establishing controls for posts and routes
+
 class PostsController < ApplicationController
-  http_basic_authenticate_with name: 'tig', password: 'mew', except: [:index, :show]
+  http_basic_authenticate_with name: 'tig', password: 'mew',
+  except: %i[index, show]
 
   def index
     @posts = Post.all
