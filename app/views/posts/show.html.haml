@@ -1,0 +1,8 @@
+= link_to 'Go back to posts', posts_path
+= link_to 'Edit post', edit_post_path(@post)
+
+%strong Title:
+= @post.title
+
+%strong Text:
+= @post.body
