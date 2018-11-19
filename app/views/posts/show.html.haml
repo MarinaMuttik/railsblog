@@ -16,4 +16,4 @@
 %p
 %strong Add a comment:
 %p
-= render 'comments/form', post: @post, comment: @comment
+= render 'comments/form', post: @post, comment: @post.comments.build

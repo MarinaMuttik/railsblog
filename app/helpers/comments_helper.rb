@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#comms helpers
+# comms helpers
 
 module CommentsHelper
 end

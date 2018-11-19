@@ -4,7 +4,7 @@
 
 class PostsController < ApplicationController
   http_basic_authenticate_with name: 'tig', password: 'mew',
-  except: %i[index, show]
+  except: %i[index show]
 
   def index
     @posts = Post.all
