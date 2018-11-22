@@ -1,11 +1,11 @@
 !!!
-%html{html_attrs('en')}
+%html{ html_attrs('en') }
   %head
     %meta{ :content => 'text/html; charset=UTF-8',
                        'http-equiv' => 'Content-Type' }/
     %meta{ :name => 'author', :content => 'Marina Muttik' }
-    %meta{ :name => 'description', :content => 'Web CV' }
-    %meta{ :name => 'keywords', :content => 'cv, curriculum vitae' }
+    %meta{ :name => 'description', :content => 'Blog' }
+    %meta{ :name => 'keywords', :content => 'blog, personal blog' }
     %meta{ :name => 'viewport',
            :content => 'width=device-width, initial-scale=1.0' }
     %title Marina's Blog
@@ -13,13 +13,9 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-    %link{ :href => '/reset.css', :type => 'text/css', :rel => 'stylesheet'}
-    %link{ :href => '/blog.css', :type => 'text/css', :rel => 'stylesheet'}
-    %link{ :href => 'https://fonts.googleapis.com/css?family=Raleway:          |
-                    400,400i,700,700i',                                        |
-           :rel => 'stylesheet' }
+    = stylesheet_link_tag "application", :media => "all"
 
-  %div{:id => 'container'}
+  %div{ :id => 'container' }
     %header
       %h1 Marina's Blog
       %nav

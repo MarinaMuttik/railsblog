@@ -1,0 +1,207 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @font-face {
+   font-family: 'Raleway';
+   src:
+    font-url('Raleway/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+ @font-face {
+   font-family: 'Raleway';
+   src:
+    font-url('Raleway/Raleway-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+ }
+ @font-face {
+   font-family: 'Raleway';
+   src:
+    font-url('Raleway/Raleway-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+ }
+
+ html, body {
+    height:100%;
+ }
+
+ #container {
+   min-height:100%;
+   position:relative;
+   padding-bottom: 3rem;
+ }
+
+ body {
+   font-family: 'Raleway', sans-serif;
+   line-height: 1.25em;
+   background-color: hsla(180, 65%, 60%, 0.5);
+   text-align: center;
+   color: hsla(0, 0%, 100%, 1);
+   z-index: 0;
+ }
+
+ header {
+   background-color: hsla(180, 60%, 50%, 1);
+   overflow: hidden;
+   padding: 1rem;
+   width: 100%;
+   box-sizing: border-box;
+ }
+
+ header a {
+   background-color: hsla(180, 90%, 30%, 0.5);
+   font-size: 1.2em;
+   text-align: center;
+   border-radius: 0.5em;
+ }
+
+ header a:hover {
+   background-color: hsla(180, 95%, 25%, 0.5);
+ }
+
+ header h1, header a {
+   float: left;
+   margin: 0.5rem;
+   padding: 1rem;
+ }
+
+ nav {
+   float: right;
+ }
+
+ @media screen and (max-width: 940px) {
+   header a {
+     float: none;
+     display: block;
+   }
+   nav {
+     float: none;
+   }
+   header h1 {
+     float: none;
+     line-height: 1em;
+   }
+ }
+
+ p {
+   font-size: 1em;
+ }
+
+ h1 {
+   font-size: 3em;
+   font-weight: bold;
+   text-align: left;
+   margin: 2rem auto 2rem 6rem;
+ }
+
+ h2 {
+   font-size: 1.3rem;
+   font-style: italic;
+   text-decoration: underline;
+   line-height: 1.25em;
+   margin: 1.5rem;
+   border-bottom: 0.02rem dashed hsla(0, 0%, 100%, 1);
+ }
+
+ h3, th {
+   font-size: 1.3em;
+   font-weight: bold;
+   line-height: 1.25em;
+   margin: 1.5rem;
+ }
+
+ h4 {
+   font-size: 1.15rem;
+   line-height: 1.1em;
+   margin: 1rem;
+ }
+
+ hr {
+   clear: both;
+   margin: 2rem auto;
+   border: 0.02rem dashed hsla(0, 0%, 100%, 1);
+ }
+
+ a {
+   text-decoration: underline;
+   color: hsla(0, 0%, 100%, 1);
+   margin: 2rem;
+ }
+
+ a:hover {
+   -webkit-text-stroke: 0.05em;
+ }
+
+ .dates {
+     font-style: italic;
+     margin: 1rem;
+ }
+
+ main {
+   width: 100%;
+   }
+
+ section {
+   background-color: hsla(180, 80%, 40%, 0.4);
+   width: 70%;
+   margin: 1rem;
+   margin-left: auto;
+   margin-right: auto;
+   overflow: hidden;
+   padding: 1rem;
+   min-width: 20rem;
+   box-sizing: border-box;
+ }
+
+ table {
+   margin: 2.5%;
+   width: 95%;
+   border: 1px dashed hsla(100, 100%, 100%, 0.5);
+   table-layout: fixed;
+   word-wrap: normal;
+ }
+
+ table#comment {
+   word-wrap: break-word;
+ }
+
+ td, th {
+   padding: 0.5em;
+ }
+
+ img {
+   width: 80%;
+   padding: 5%;
+ }
+
+ img:hover {
+   opacity: 0.75;
+   transform: scale(1.1);
+ }
+
+ footer {
+   bottom: 0;
+   position: absolute;
+   background-color: hsla(180, 60%, 50%, 0.7);
+   width: 100%;
+   height: 3rem;
+ }
+
+ .contact {
+   line-height: 3rem;
+ }
