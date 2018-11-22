@@ -57,27 +57,27 @@ body {
 }
 
 body {
+  background-color: $light-teal;
+  color: $white;
   font-family: 'Raleway', sans-serif;
   line-height: 1.25em;
-  background-color: $light-teal;
   text-align: center;
-  color: hsla(0, 0%, 100%, 1);
   z-index: 0;
 }
 
 header {
   background-color: $teal;
+  box-sizing: border-box;
   overflow: hidden;
   padding: 1rem;
   width: 100%;
-  box-sizing: border-box;
 }
 
 header a {
   background-color: $dark-teal;
+  border-radius: 0.5em;
   font-size: 1.2em;
   text-align: center;
-  border-radius: 0.5em;
 }
 
 header a:hover {
@@ -97,12 +97,14 @@ nav {
 
 @media screen and (max-width: 940px) {
   header a {
-    float: none;
     display: block;
+    float: none;
   }
+
   nav {
     float: none;
   }
+
   header h1 {
     float: none;
     line-height: 1em;
@@ -116,17 +118,17 @@ p {
 h1 {
   font-size: 3em;
   font-weight: bold;
-  text-align: left;
   margin: 2rem auto 2rem 6rem;
+  text-align: left;
 }
 
 h2 {
+  border-bottom: 0.02rem dashed $white;
   font-size: 1.3rem;
   font-style: italic;
-  text-decoration: underline;
   line-height: 1.25em;
   margin: 1.5rem;
-  border-bottom: 0.02rem dashed $white;
+  text-decoration: underline;
 }
 
 h3,
@@ -144,24 +146,19 @@ h4 {
 }
 
 hr {
+  border: 0.02rem dashed $white;
   clear: both;
   margin: 2rem auto;
-  border: 0.02rem dashed $white;
 }
 
 a {
-  text-decoration: underline;
   color: $white;
   margin: 2rem;
+  text-decoration: underline;
 }
 
 a:hover {
   -webkit-text-stroke: 0.05em;
-}
-
-.dates {
-  font-style: italic;
-  margin: 1rem;
 }
 
 main {
