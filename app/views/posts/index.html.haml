@@ -1,23 +1,21 @@
 %h1 Show the Posts!
-
-= link_to 'Home Page', controller: 'welcome'
-= link_to 'Add new post', new_post_path
-
-%table
-  %tr
-    %th Title
-    %th Body
-    %th Comments
-    %th Link
-    %th
-    %th
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.body
-      %td= post.comments.count
-      %td= link_to 'Show', post_path(post)
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Delete', post_path(post),
-      method: :delete,
-      data:  { confirm: 'Are you sure you wish to delete this post?' }
+%section
+  %section
+    %table
+      %tr
+        %th Title
+        %th{ :colspan => 2 } Body
+        %th Comments
+        %th
+        %th
+        %th
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td{ :colspan => 2 }= post.body
+          %td= post.comments.count
+          %td= link_to 'Show', post_path(post)
+          %td= link_to 'Edit', edit_post_path(post)
+          %td= link_to 'Delete', post_path(post),
+          method: :delete,
+          data:  { confirm: 'Are you sure you wish to delete this post?' }

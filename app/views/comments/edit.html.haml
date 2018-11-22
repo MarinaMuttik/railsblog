@@ -1,4 +1,6 @@
 %h1 Edit Comment
-= link_to 'Go back to post', post_path(@post)
+%section
+  = render 'comments/form', post: @post, comment: @comment
 
-= render 'comments/form', post: @post, comment: @comment
+%section
+  = link_to 'Go back to post', post_path(@post)

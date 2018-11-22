@@ -1,3 +1,13 @@
+html, body {
+   height:100%;
+}
+
+#container {
+  min-height:100%;
+  position:relative;
+  padding-bottom: 3rem;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.25em;
@@ -5,7 +15,6 @@ body {
   text-align: center;
   color: hsla(0, 0%, 100%, 1);
   z-index: 0;
-  overflow: visible;
 }
 
 header {
@@ -70,7 +79,7 @@ h2 {
   border-bottom: 0.02rem dashed hsla(0, 0%, 100%, 1);
 }
 
-h3 {
+h3, th {
   font-size: 1.3em;
   font-weight: 700;
   line-height: 1.25em;
@@ -79,7 +88,6 @@ h3 {
 
 h4 {
   font-size: 1.15rem;
-  font-weight: bold;
   line-height: 1.1em;
   margin: 1rem;
 }
@@ -121,29 +129,17 @@ section {
   box-sizing: border-box;
 }
 
-ul li {
-  padding: 0.5rem 0rem;
-  list-style-type: none;
+table {
+  margin: 2.5%;
+  width: 95%;
+  border: 1px dashed hsla(100, 100%, 100%, 0.5);
+  table-layout: fixed;
+  word-wrap: break-word;
 }
 
-ul li::before {
-  content: "♦";
-  padding-right: 0.5rem;
-}
-
-.buttons {
-  width: 15%;
-  box-sizing: border-box;
-}
-
-#workicon, button {
-  width: 6rem;
-  height: 6rem;
-  z-index: 2;
-}
-
-#workicon {
-  float: right;
+img {
+  width: 80%;
+  padding: 5%;
 }
 
 img:hover {
@@ -151,30 +147,9 @@ img:hover {
   transform: scale(1.1);
 }
 
-button {
-  background-color: hsla(180, 100%, 30%, 0.5);
-  background-clip: padding-box;
-  border: 5px solid hsla(180, 100%, 30%, 0.5);
-  color: hsla(0, 0%, 100%, 1);
-  font-family: inherit;
-  font-size: inherit;
-  float: left;
-  outline: none;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-button:hover {
-  transform: scale(1.1);
-  font-size: 1rem;
-  background-color: hsla(180, 65%, 90%, 1);
-  background-clip: padding-box;
-  border: 5px solid hsla(180, 100%, 30%, 0.5);
-  color: hsla(180, 100%, 30%, 1);
-}
-
 footer {
   bottom: 0;
+  position: absolute;
   background-color: hsla(180, 60%, 50%, 0.7);
   width: 100%;
   height: 3rem;

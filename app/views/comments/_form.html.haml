@@ -1,14 +1,15 @@
-= form_for([ post, comment ], :local => true) do |form|
-  %table
-    %tr
-      %td
-        %label{ :for => 'text_field' }> Commenter
-      %td
-        = form.text_field :commenter
-    %tr
-      %td
-        %label{ :for => 'text_area' }> Body
-      %td
-        = form.text_area :body
+%section
+  = form_for([ post, comment ], :local => true) do |form|
+    %table
+      %tr
+        %td
+          %label{ :for => 'text_field' }> Commenter:
+        %td
+          = form.text_field :commenter
+      %tr
+        %td
+          %label{ :for => 'text_area' }> Comment:
+        %td
+          = form.text_area :body
 
-  = form.submit
+    = form.submit

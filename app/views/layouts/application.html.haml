@@ -18,14 +18,16 @@
     %link{ :href => 'https://fonts.googleapis.com/css?family=Raleway:          |
                     400,400i,700,700i',                                        |
            :rel => 'stylesheet' }
-  %body
 
+  %div{:id => 'container'}
     %header
-      %h1 Marina's Blog |
-
-    %main
+      %h1 Marina's Blog
+      %nav
+        = link_to 'Home Page', controller: 'welcome'
+        = link_to 'View Posts', posts_path
+        = link_to 'Add new post', new_post_path
+    %body
       = yield
-
     %footer
       %a{ :href => 'mailto:mmuttik@live.co.uk?subject=Web%20CV',
           :class => 'contact' } Contact Us!
