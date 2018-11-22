@@ -1,10 +1,29 @@
 !!!
-%html
+%html{ html_attrs('en') }
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Blog
+    %meta{ :content => 'text/html; charset=UTF-8',
+                       'http-equiv' => 'Content-Type' }/
+    %meta{ :name => 'author', :content => 'Marina Muttik' }
+    %meta{ :name => 'description', :content => 'Blog' }
+    %meta{ :name => 'keywords', :content => 'blog, personal blog' }
+    %meta{ :name => 'viewport',
+           :content => 'width=device-width, initial-scale=1.0' }
+    %title Marina's Blog
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
-    = yield
+
+    = stylesheet_link_tag "application", :media => "all"
+
+  %div{ :id => 'container' }
+    %header
+      %h1 Marina's Blog
+      %nav
+        = link_to 'Home Page', controller: 'welcome'
+        = link_to 'View Posts', posts_path
+        = link_to 'Add new post', new_post_path
+    %body
+      = yield
+    %footer
+      %a{ :href => 'mailto:mmuttik@live.co.uk?subject=Web%20CV',
+          :class => 'contact' } Contact Us!
