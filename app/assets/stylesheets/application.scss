@@ -14,194 +14,207 @@
  *= require_self
  */
 
- @font-face {
-   font-family: 'Raleway';
-   src:
+@font-face {
+  font-family: 'Raleway';
+  src:
     font-url('Raleway/Raleway-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
- }
- @font-face {
-   font-family: 'Raleway';
-   src:
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src:
     font-url('Raleway/Raleway-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
- }
- @font-face {
-   font-family: 'Raleway';
-   src:
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src:
     font-url('Raleway/Raleway-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
- }
+}
 
- html, body {
-    height:100%;
- }
+$light-teal: hsla(180, 65%, 60%, 0.5);
+$teal: hsla(180, 60%, 50%, 1);
+$transp-teal: hsla(180, 80%, 40%, 0.4);
+$dark-teal: hsla(180, 90%, 30%, 0.5);
+$darkest-teal: hsla(180, 95%, 25%, 0.5);
+$white: hsla(0, 0%, 100%, 1);
 
- #container {
-   min-height:100%;
-   position:relative;
-   padding-bottom: 3rem;
- }
+html,
+body {
+  height:100%;
+}
 
- body {
-   font-family: 'Raleway', sans-serif;
-   line-height: 1.25em;
-   background-color: hsla(180, 65%, 60%, 0.5);
-   text-align: center;
-   color: hsla(0, 0%, 100%, 1);
-   z-index: 0;
- }
+#container {
+  min-height:100%;
+  position:relative;
+  padding-bottom: 3rem;
+}
 
- header {
-   background-color: hsla(180, 60%, 50%, 1);
-   overflow: hidden;
-   padding: 1rem;
-   width: 100%;
-   box-sizing: border-box;
- }
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.25em;
+  background-color: $light-teal;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 1);
+  z-index: 0;
+}
 
- header a {
-   background-color: hsla(180, 90%, 30%, 0.5);
-   font-size: 1.2em;
-   text-align: center;
-   border-radius: 0.5em;
- }
+header {
+  background-color: $teal;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
 
- header a:hover {
-   background-color: hsla(180, 95%, 25%, 0.5);
- }
+header a {
+  background-color: $dark-teal;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 0.5em;
+}
 
- header h1, header a {
-   float: left;
-   margin: 0.5rem;
-   padding: 1rem;
- }
+header a:hover {
+  background-color: $darkest-teal;
+}
 
- nav {
-   float: right;
- }
+header h1,
+header a {
+  float: left;
+  margin: 0.5rem;
+  padding: 1rem;
+}
 
- @media screen and (max-width: 940px) {
-   header a {
-     float: none;
-     display: block;
-   }
-   nav {
-     float: none;
-   }
-   header h1 {
-     float: none;
-     line-height: 1em;
-   }
- }
+nav {
+  float: right;
+}
 
- p {
-   font-size: 1em;
- }
+@media screen and (max-width: 940px) {
+  header a {
+    float: none;
+    display: block;
+  }
+  nav {
+    float: none;
+  }
+  header h1 {
+    float: none;
+    line-height: 1em;
+  }
+}
 
- h1 {
-   font-size: 3em;
-   font-weight: bold;
-   text-align: left;
-   margin: 2rem auto 2rem 6rem;
- }
+p {
+  font-size: 1em;
+}
 
- h2 {
-   font-size: 1.3rem;
-   font-style: italic;
-   text-decoration: underline;
-   line-height: 1.25em;
-   margin: 1.5rem;
-   border-bottom: 0.02rem dashed hsla(0, 0%, 100%, 1);
- }
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+  margin: 2rem auto 2rem 6rem;
+}
 
- h3, th {
-   font-size: 1.3em;
-   font-weight: bold;
-   line-height: 1.25em;
-   margin: 1.5rem;
- }
+h2 {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-decoration: underline;
+  line-height: 1.25em;
+  margin: 1.5rem;
+  border-bottom: 0.02rem dashed $white;
+}
 
- h4 {
-   font-size: 1.15rem;
-   line-height: 1.1em;
-   margin: 1rem;
- }
+h3,
+th {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 1.5rem;
+}
 
- hr {
-   clear: both;
-   margin: 2rem auto;
-   border: 0.02rem dashed hsla(0, 0%, 100%, 1);
- }
+h4 {
+  font-size: 1.15rem;
+  line-height: 1.1em;
+  margin: 1rem;
+}
 
- a {
-   text-decoration: underline;
-   color: hsla(0, 0%, 100%, 1);
-   margin: 2rem;
- }
+hr {
+  clear: both;
+  margin: 2rem auto;
+  border: 0.02rem dashed $white;
+}
 
- a:hover {
-   -webkit-text-stroke: 0.05em;
- }
+a {
+  text-decoration: underline;
+  color: $white;
+  margin: 2rem;
+}
 
- .dates {
-     font-style: italic;
-     margin: 1rem;
- }
+a:hover {
+  -webkit-text-stroke: 0.05em;
+}
 
- main {
-   width: 100%;
-   }
+.dates {
+  font-style: italic;
+  margin: 1rem;
+}
 
- section {
-   background-color: hsla(180, 80%, 40%, 0.4);
-   width: 70%;
-   margin: 1rem;
-   margin-left: auto;
-   margin-right: auto;
-   overflow: hidden;
-   padding: 1rem;
-   min-width: 20rem;
-   box-sizing: border-box;
- }
+main {
+  width: 100%;
+}
 
- table {
-   margin: 2.5%;
-   width: 95%;
-   border: 1px dashed hsla(100, 100%, 100%, 0.5);
-   table-layout: fixed;
-   word-wrap: normal;
- }
+section {
+  background-color: $transp-teal;
+  box-sizing: border-box;
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 20rem;
+  overflow: hidden;
+  padding: 1rem;
+  width: 70%;
+}
 
- table#comment {
-   word-wrap: break-word;
- }
+table {
+  border: 1px dashed $white;
+  margin: 2.5%;
+  table-layout: fixed;
+  width: 95%;
+  word-wrap: normal;
+}
 
- td, th {
-   padding: 0.5em;
- }
+#comment {
+  word-wrap: break-word;
+}
 
- img {
-   width: 80%;
-   padding: 5%;
- }
+td,
+th {
+  padding: 0.5em;
+}
 
- img:hover {
-   opacity: 0.75;
-   transform: scale(1.1);
- }
+img {
+  padding: 5%;
+  width: 80%;
+}
 
- footer {
-   bottom: 0;
-   position: absolute;
-   background-color: hsla(180, 60%, 50%, 0.7);
-   width: 100%;
-   height: 3rem;
- }
+img:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
 
- .contact {
-   line-height: 3rem;
- }
+footer {
+  background-color: $teal;
+  bottom: 0;
+  height: 3rem;
+  position: absolute;
+  width: 100%;
+}
+
+.contact {
+  line-height: 3rem;
+}
